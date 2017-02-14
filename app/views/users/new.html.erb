@@ -1,0 +1,12 @@
+<div class="hero">
+  <!-- <p class="large brandon">Harry&#8217;s is live</p> -->
+  <p class="small brandon" style="color: white;">LAUNCHING SOON, a Travel Rewards company like nothing you’ve ever seen before. We’re awarding trips to amazing destinations around the World.</p>
+</div>
+
+<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+  <% if Rails.application.config.ended %>
+    <%= render "users/campaign_ended" %>
+  <% else %>
+    <%= render "users/campaign_ongoing" %>
+  <% end %>
+</div>

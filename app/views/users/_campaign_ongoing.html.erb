@@ -1,0 +1,7 @@
+<div class=""></div>
+<!-- <div class="key"></div> -->
+<!-- <p class="byline brandon">Be the first to know</p> -->
+<%= form_for @user, :url => { :action => "create" } do |f| %>
+  <%= f.text_field :email, :placeholder => "Submit email to be 1st in line", :class => "email brandon" %>
+  <input class="submit brandon" name="commit" type="submit" value="Send" style="background: none repeat scroll 0% 0% red; width: 75px; "/>
+<% end %>

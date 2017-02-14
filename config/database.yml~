@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: prelaunchr_development_rails4
+  host: localhost
+  username: postgres
+  password: postgres
+
+
+test:
+  adapter: postgresql
+  database: prelaunchr_test_rails4
+  host: localhost
+  username: postgres
+  password: postgres
