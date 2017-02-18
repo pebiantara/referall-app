@@ -20,7 +20,7 @@ html.home{
 }
 
 #home{
-	padding-bottom: 50px;
+	/* padding-bottom: 50px; */
 }
 
 #home .page-content{
@@ -30,9 +30,9 @@ html.home{
 
 #home .hero{
 	width: 100%;
-	height: 446px;
+	height: 768px;
 	background: image-url("home/hero.jpg") center center no-repeat;
-	background-size: 1600px 446px;
+	background-size: 1600px 768px;
 	overflow: hidden;
 	position: relative;
 	letter-spacing: .09em;
@@ -54,7 +54,8 @@ html.home{
 	font-weight: bold;
 	color: #955F5D;
 	font-size: 18px;
-	margin: 10px 0 0 115px;
+	/* margin: 10px 0 0 115px; */
+	margin: 75px 0px 0px 200px;
 	line-height: 30px;
 	position: relative;
 	z-index: 2;
@@ -67,7 +68,8 @@ html.home{
 #home .form-wrap{
 	height: 80px;
 	width: 411px;
-	margin: 23px auto 0;
+	/* margin: 23px auto 0; */
+	margin: 40px 0px 0px 215px;
 }
 
 #home .form-wrap .key{
