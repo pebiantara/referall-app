@@ -270,7 +270,7 @@ html.home{
 }
 
 #refer .header .content{
-	width: 315px;
+	width: 600px;
 	margin: 0 auto;
 }
 
@@ -300,8 +300,8 @@ html.home{
 }
 
 #refer .hero{
-	background: #1a1aff;
-	height: 450px;
+	background: #1E7ACD;
+	height: 430px;
 	overflow: hidden;
 }
 
@@ -311,9 +311,10 @@ html.home{
 	background: image-url("refer/mammoth.jpg") 0 0 no-repeat;
 	background-size: 740px 430px;
 	overflow: hidden;
-	margin-top: 15px;
+	/* margin-top: 15px; */
 	float: left;
-	margin-left: 20px;
+	/* margin-left: 20px; */
+	/* margin: 15px; */
 }
 
 #refer .mammoth .need{
