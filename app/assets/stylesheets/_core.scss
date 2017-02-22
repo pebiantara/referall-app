@@ -300,16 +300,16 @@ html.home{
 }
 
 #refer .hero{
-	background: #F1F0EE;
-	height: 391px;
+	background: #1a1aff;
+	height: 450px;
 	overflow: hidden;
 }
 
 #refer .mammoth{
-	width: 612px;
-	height: 394px;
+	width: 652px;
+	height: 430px;
 	background: image-url("refer/mammoth.jpg") 0 0 no-repeat;
-	background-size: 610px 394px;
+	background-size: 650px 430px;
 	overflow: hidden;
 	margin-top: 15px;
 	float: left;
@@ -332,33 +332,32 @@ html.home{
 	float: right;
 	width: 400px;
 	text-align: center;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	letter-spacing: .13em;
 	margin-right: 60px;
 }
 
 #refer .share-wrap .why{
 	font-size: 16px;
-	color: #555556;
+	color: #FFFFFF;
 	font-weight: bold;
-	margin-top: 42px;
+	margin-top: 15px;
 }
 
 #refer .share-wrap .title{
 	font-size: 30px;
-	line-height: 40px;
-	text-transform: uppercase;
+	line-height: 37px;
 	font-weight: bold;
-	color: #074E6F;
+	color: #FFFFFF;
 	margin-top: 18px;
 	letter-spacing: .13em;
 }
 
 #refer .share-wrap .subtitle{
-	color: #565656;
+	color: #FFFFFF;
 	font-size: 14px;
 	text-transform: none;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 #refer .share-wrap .copy-link{
