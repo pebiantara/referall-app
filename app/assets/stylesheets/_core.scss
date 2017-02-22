@@ -254,7 +254,8 @@ html.home{
 }
 
 #refer .page-content{
-	width: 1120px;
+	/* width: 1120px;  */
+	width: 100%;
 	margin: 0 auto;
 	z-index: 0;
 	position: relative;
@@ -306,13 +307,14 @@ html.home{
 }
 
 #refer .mammoth{
-	width: 652px;
+	width: 742px;
 	height: 430px;
 	background: image-url("refer/mammoth.jpg") 0 0 no-repeat;
-	background-size: 650px 430px;
+	background-size: 740px 430px;
 	overflow: hidden;
 	margin-top: 15px;
 	float: left;
+	margin-left: 20px;
 }
 
 #refer .mammoth .need{
@@ -338,14 +340,14 @@ html.home{
 }
 
 #refer .share-wrap .why{
-	font-size: 16px;
+	font-size: 15px;
 	color: #FFFFFF;
 	font-weight: bold;
 	margin-top: 15px;
 }
 
 #refer .share-wrap .title{
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 37px;
 	font-weight: bold;
 	color: #FFFFFF;
