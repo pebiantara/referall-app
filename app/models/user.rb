@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
     },
     {
       'count' => 35,
-      'html' => '1-year free membership +<br> 1st Class airline tickets + Sleeping Mask',
+      'html' => '1st Class airline tickets + Sleeping Mask',
       'class' => 'six',
       'image' => ActionController::Base.helpers.asset_path(
         'refer/image011.jpg')
