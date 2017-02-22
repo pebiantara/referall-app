@@ -16,7 +16,7 @@ form{
 /* Home */
 
 html.home{
-	background: #EDECEA;
+	/*  background: #EDECEA; */
 }
 
 #home{
@@ -26,6 +26,18 @@ html.home{
 #home .page-content{
 	width: 1400px;
 	margin: 0 auto;
+}
+
+.home-logo{
+	width: 150px;
+	height: 70px;
+	background: image-url("home/logo-01.png") center center no-repeat;
+	background-size: 150px 70px;
+	overflow: hidden;
+	position: relative;
+	letter-spacing: .09em;
+	margin: 5px 0px 5px 10px;
+    float: left;
 }
 
 #home .hero{
@@ -69,7 +81,7 @@ html.home{
 	height: 80px;
 	width: 411px;
 	/* margin: 23px auto 0; */
-	margin: 40px 0px 0px 215px;
+	margin: 20px 0px 0px 215px;
 }
 
 #home .form-wrap .key{
