@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
       'html' => 'Travel Themed Bottle Opener',
       'class' => 'two',
       'image' =>  ActionController::Base.helpers.asset_path(
-        'refer/cream-tooltip@2x.gif')
+        'refer/prize-5.gif')
     },
     {
       'count' => 10,
