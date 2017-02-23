@@ -19,35 +19,35 @@ class User < ActiveRecord::Base
       'html' => 'Travel Themed Bottle Opener',
       'class' => 'two',
       'image' =>  ActionController::Base.helpers.asset_path(
-        'assets/refer/prize-5.gif')
+        'assets/refer/truman@2x.gif')
     },
     {
       'count' => 10,
       'html' => 'Universal Travel Charger',
       'class' => 'three',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/truman@2x.gif')
+        'assets/refer/prize-5.gif')
     },
     {
       'count' => 15,
-      'html' => 'Exclusive Luggage Tag + <br>15 Entries for Miami Travel Award',
+      'html' => 'Luggage Tag + <br>15 Entries for Miami Travel Award',
       'class' => 'four',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/winston@2x.jpg')
+        'assets/refer/Luggage Tag - 15 Referrals.jpg')
     },
     {
       'count' => 20,
       'html' => 'Digital Luggage Scale + <br>20 Entries into Miami Travel Award',
       'class' => 'five',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/blade-explain@2x.jpg')
+        'assets/refer/Digital Luggage Scale - 20 Referrlas.jpg')
     },
     {
       'count' => 35,
-      'html' => 'Padded Sleeping Mask + <br>1st Class Airline Ticket for Two',
+      'html' => 'Amenity Kit + <br>1st Class Airline Ticket for Two',
       'class' => 'six',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/image011.jpg')
+        'assets/refer/Amenity Kit - 35 Referrals.jpg')
     }
   ]
 
