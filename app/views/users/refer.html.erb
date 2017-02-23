@@ -22,10 +22,10 @@
       </p>
       <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
       <% twitter_message = "#GLOBEHOPR." %>
-      <div class="social-links">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=GLOBEHOPR" class="fb" target="_blank"></a>
-        <div class="sep"></div>
-        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
+      <div class="social-links" style="width: 230px;">
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=GLOBEHOPR" class="fb" target="_blank" style="width: 120px; color: #FFF; text-decoration: none; float: left; font-weight: bold;">@Facebook</a>
+        <!-- <div class="sep"></div> -->
+        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank" style="width: 100px; color: #FFF; text-decoration: none; float: left; font-weight: bold; padding-left: 10px">@twitter</a>
       </div>
     </div>
   </div>
