@@ -306,10 +306,10 @@ html.home{
 }
 
 #refer .mammoth{
-	width: 742px;
+	width: 762px;
 	height: 430px;
 	background: image-url("refer/mammoth.jpg") 0 0 no-repeat;
-	background-size: 740px 430px;
+	background-size: 760px 430px;
 	overflow: hidden;
 	/* margin-top: 15px; */
 	float: left;
@@ -357,9 +357,10 @@ html.home{
 
 #refer .share-wrap .subtitle{
 	color: #FFFFFF;
-	font-size: 14px;
+	font-size: 15px;
 	text-transform: none;
 	margin-top: 10px;
+	font-weight: bold;
 }
 
 #refer .share-wrap .copy-link{

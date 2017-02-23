@@ -18,12 +18,12 @@
       <p class="title brandon">Don’t go alone. Invite friends & earn even more chances for Miami!</p>
 
 
-      <p class="subtitle brandon">Sign up and receive a unique referral link to share with friends and family via email, Facebook and Twitter. The moe referrals, the more chances you’ll have to earn the award.
+      <p class="subtitle brandon" style="font-weight: bold; font-size: 15px;">Sign-up and receive a unique referral link to share with friends and family via email, Facebook and Twitter. The more referrals, the more chances you’ll have to earn "free" gifts and more entries for the travel award to Miami in June!
       </p>
       <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-      <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+      <% twitter_message = "#GLOBEHOPR." %>
       <div class="social-links">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=GLOBEHOPR" class="fb" target="_blank"></a>
         <div class="sep"></div>
         <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
       </div>
@@ -87,7 +87,7 @@
     <% end %>
     <p class="check brandon">Keep checking</p>
 
-    <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
+    <!-- <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p> -->
     <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
   </div>
 </div>
