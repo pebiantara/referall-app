@@ -622,6 +622,14 @@ html.home{
 	text-decoration: none;
 }
 
+#refer .mammoth .mammoth-text{
+	margin: 21px 0px 0px 10px; 
+	width: 306px; 
+	font-size: 13px; 
+	line-height: 21px; 
+	text-transform: none;
+}
+
 
 
 /*
@@ -659,8 +667,17 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 
 	#refer .mammoth{
+	    width: 610px;
 		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
 		background-size: 610px 394px;
+	}
+
+	#refer .mammoth .mammoth-text{
+      width: 250px;
+	}
+
+	#refer .page-content{
+      padding: 0px 5px 0px 5px;
 	}
 
 	#refer .share-wrap .social-links .fb{
