@@ -666,10 +666,15 @@ only screen and (min-device-pixel-ratio: 2) {
 		background-size: 106px 19px;
 	}
 
+	#refer .hero{
+	  height: 450px;
+	}
+
 	#refer .mammoth{
 	    width: 610px;
+	    height: 450px;
 		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
-		background-size: 610px 394px;
+		background-size: 610px 450px;
 	}
 
 	#refer .mammoth .mammoth-text{
@@ -678,6 +683,9 @@ only screen and (min-device-pixel-ratio: 2) {
 
 	#refer .page-content{
       padding: 0px 5px 0px 5px;
+	}
+	#refer .share-wrap{
+	  margin-right: 30px;
 	}
 
 	#refer .share-wrap .social-links .fb{
