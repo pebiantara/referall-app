@@ -640,6 +640,7 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
+	    height: 900px;
 		background: image-url("home/hero@2x.jpg") center center no-repeat;
 		background-size: 1600px 900px;
 	}
