@@ -1,4 +1,6 @@
 require 'users_helper'
+require 'mailchimp'
+
 
 class User < ActiveRecord::Base
   belongs_to :referrer, class_name: 'User', foreign_key: 'referrer_id'
@@ -57,7 +59,20 @@ class User < ActiveRecord::Base
     self.referral_code = UsersHelper.unused_referral_code
   end
 
+  def create_email_in_mailchimp(email)
+    begin 
+    mailchimp = Mailchimp::API.new('1c7a7329d017d4eabefd803e11164ae5-us15')
+    m = mailchimp.lists.subscribe('df4afa6724', { email: email}, '', '', false)
+    puts m
+    rescue Mailchimp::ListAlreadySubscribedError
+      puts "Mailchimp::ListAlreadySubscribedError"
+    rescue 
+      puts "error from mailchimp"
+    end
+  end
+
   def send_welcome_email
-    UserMailer.delay.signup_email(self)
+    #UserMailer.delay.signup_email(self)
+    create_email_in_mailchimp(self.email)
   end
 end
