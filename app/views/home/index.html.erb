@@ -1,0 +1,157 @@
+<header>
+	<nav class="navbar navbar-default navbar-no-background">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="/">
+					<%= image_tag "logo.png", class: 'img-responsive' %>
+				</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Member Login</a></li>
+					<li><a href="#">Join Today</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="form-member">
+		<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-3  member-input">
+			<h5>Become a Member today and quality for our</h5>
+			<h5>Weekly trip awards.</h5>
+			<%= form_for @user, :url => { :action => "create", :controller => "users" } do |f| %>
+			<div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+				<div class="input-group">
+					<%= f.email_field :email, :placeholder => "Submit email to be 1st in line", :class => "form-control email-member",
+					:pattern => "[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}", 
+					:required => true %>
+					<span class="input-group-btn">
+						<button class="btn btn-danger" type="submit">Go!</button>
+					</span>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</section> 
+</header>
+<div class="container">
+	<section class="info">
+		<div class="col-md-offset-1 col-md-10 info-box">
+			<div class="col-md-4 col-lg-4 info-content">
+				<%= image_tag "partner.png", class: 'partner' %>
+				<h4>OUR PARTNERS</h4>
+				<p>
+					Globehopr partners with restaurants, hotels, event providers, retailers and more to provide our members with VIP access and member exclusive discounts of up to 65% off.
+				</p>
+			</div>
+			<div class="col-md-4 col-lg-4 info-content">
+				<%= image_tag "benefit.png", class: 'benefit' %>
+				<h4>MEMBER BENEFITS</h4>
+				<p>
+					Complimentary coctails are only the start. Our members earn travel points with each purchase, free airlanes tickets, hotel stays and the chance to be awarded our complimentary trip for two, given to 4 members, each and every month.
+				</p>
+			</div>
+			<div class="col-md-4 col-lg-4 info-content">
+				<%= image_tag "comunity.png", class: 'community' %>
+				<h4>OUR COMMUNITY</h4>
+				<p>
+					Our members are professionals from different industries, meeting with like-minded professionals at our private events and member only community parties.
+				</p>			
+			</div>
+		</div>
+	</section>
+	<section class="benefits">
+		<div class="benefits-box col-md-12 col-lg-12">
+			<div class="col-md-3 content-benefit">
+				<h4>TRAVEL REWARDS</h4>
+				<%= image_tag("plane.png", class: 'img-responsive') %>
+				<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
+			</div>
+			<div class="col-md-3 content-benefit">			  
+				<h4>PRIVATE EVENTS</h4>
+				<%= image_tag("massage.png", class: 'img-responsive') %>			
+				<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
+			</div>
+			<div class="col-md-3 content-benefit">
+				<h4>FITNESS/LIFESTYLE</h4>
+				<%= image_tag("drink.png", class: 'img-responsive') %>
+				<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
+			</div>
+			<div class="col-md-3 content-benefit">
+				<h4>MEMBER DISCOUNTS</h4>
+				<%= image_tag("member.png", class: 'img-responsive') %>
+				<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
+			</div>
+		</div>
+	</section>
+	<section class="unparraled">
+		<div class="col-md-12 col-lg-12 unparraled-box">
+			<div class="col-md-6 col-lg-6">
+				<h3>UNPARALLED BENEFIT, INCLUDING PRIVATE JET TRAVEL!</h3>
+				<p>GLOBEHOPR is the only rewards company to offer members private jet travel as an ongoing benefit!</p>
+				<p>We've parternerd with a leading private jet company to offer Platinum level members private jet travel as a part of their complimentary weekly Travel Award</p>
+			</div>
+			<div class="col-md-6 col-lg-6">
+				<%= image_tag("bg-plane.png", class: 'img-responsive') %>
+			</div>
+		</div>
+	</section>
+</div>
+<section class="footer-section">
+	<div class="col-md-4 col-lg-4 col-md-offset-7 col-lg-offset-7 text-info">
+		Are their destinations you've dreamed of exploring? As a GLOBEHOPR member, we can make that dream destinations a reality!
+		<br/>
+		<%= link_to "JOIN TODAY", "#" %>
+	</div>
+</section>
+<footer>
+	<div class="footer">
+		<ul class="footer-menu">
+			<li>
+				<%= link_to "ABOUT US", "#" %>
+			</li>
+			<li>
+				<%= link_to "JOIN US", "#" %>
+			</li>
+			<li>
+				<%= link_to "PRIVACY", "#" %>
+			</li>
+			<li>
+				<%= link_to "TERMS & CONDITIONS", "#" %>
+			</li>
+			<li>
+				<%= link_to "FAQ", "#" %>
+			</li>
+			<li>
+				<%= link_to "CONTACT GLOBEHOPR", "#" %>
+			</li>
+		</ul>
+		<div class="col-md-12 col-lg-12">
+			<div class="pull-left footer-left ico-social">
+				FOLLOW US:
+				<%= link_to "#" do %>
+          <%= image_tag("icon/fb-ico.png", width: 30) %>
+				<% end %>
+				<%= link_to "#" do %>
+          <%= image_tag("icon/twitt-ico.png", width: 28) %>
+				<% end %>
+				<%= link_to "#" do %>
+          <%= image_tag("icon/yt-ico.png", width: 30) %>
+				<% end %>
+				<%= link_to "#" do %>
+          <%= image_tag("icon/insta-ico.png", width: 30) %>
+				<% end %>
+			</div>
+			<div class="pull-right">
+				Contact GLOBEHOPR
+				<br/>
+				800-555-1212
+			</div>
+		</div>
+	</div>
+</footer>
