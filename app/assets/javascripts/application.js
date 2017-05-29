@@ -36,6 +36,10 @@ $(document).ready(function(){
 	$("#user_avatar").change(function(){
 		readURL(this);
 	});
+
+	$(".circle").hover(function(){
+		
+	})
 })
 
 var clipboard = new Clipboard('.copy-link');
@@ -65,3 +69,9 @@ function autoHeight() {
 	}, 500)
 }
 $(window).on('load', autoHeight);
+
+
+$('.circle').tooltip({
+    animated: 'fade',
+    html: true
+});

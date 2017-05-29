@@ -1,5 +1,3 @@
-<%= content_for :header, "&nbsp;" %>
-<%= content_for :footer, "&nbsp;" %>
 <div class="refer-header">
   <a href="/" style="color: #fff;text-decoration: none;"><span class="big-text">Globehopr</span></a> Thank you for joining GLOBEHOPR. You're one of the first in line!
 </div>
@@ -31,7 +29,7 @@
       <a href="#" class="copy-link btn btn-default" data-clipboard-text="<%= url %>">
         Copy Link
       </a>
-      <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=GLOBEHOPR" class="fb" target="_blank">
+      <a href="https://www.facebook.com/sharer/sharer.php ?s=100 &p[title]=GLOBEHOPR &p[summary]=GLOBEHOPR is offering two members the chance to receive a trip for 2 to exciting Miami, Florida. We’re awarding 2 trips for two, for 3-days/2-nights in July&p[url]=http://globehopr.herokuapp.com/?ref=<%= CGI::escape(@user.referral_code) %>&p[images][0]=http://globehopr.herokuapp.com/assets/logo.png" class="fb" target="_blank">
         <%= image_tag "icon/fb-ico.png", width: 30 %>
       </a>
       <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank" >
@@ -69,8 +67,9 @@
             <td class="text-center" style="padding: 30px">Friends Becoming Members</td>
             <%- stops.each_with_index do |stop, index| %>
             <td class="td-circle">
-              <div class="circle <%= 'active' if stop["selected"] %>" id="content-<%= index %>"><%= stop["count"] %></div>
-              <div class="tooltip" id="content-for-<%= index %>"><img src="<%= stop["image"] %>" height="254" width="300"></div>
+            <div class="circle <%= 'active' if stop["selected"] %>" data-toggle="tooltip" data-title="<img src='<%= stop["image"] %>' width='300' height='254'/>" id="content-<%= index %>">
+                <%= stop["count"] %>
+              </div>
             </td>
             <% end %>
           </tr>
