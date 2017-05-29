@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GLOBEHOPR</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+  <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+  <meta property="og:title" content="GLOBEHOPR"/>
+  <meta property="og:description" content="GLOBEHOPR"/>
+  <meta property="og:image" content="<%= root_url %><%= asset_path("refer/hero.jpg") %>"/>
+  <meta property="og:url" content="<%= root_url %>"/>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= yield :body_class %>">
+  <%= yield %>
+  <%= javascript_include_tag "application", media: "all" %>
+</body>
+</html>

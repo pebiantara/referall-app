@@ -2,6 +2,9 @@ $blue: #3e89cc;
 $white: #fff;
 $red: #c9302c;
 $blue2: #98d6f9;
+$referheader: #597ed8;
+$grey1: #f3f3f3;
+$circle: #b7cce2;
 
 body.home {
   background: $blue;
@@ -20,6 +23,10 @@ body.home {
 		display: block;
 		margin-top: 20px;
 	}
+}
+
+.navbar {
+	margin-bottom: 0px;
 }
 
 .form-member {
@@ -138,6 +145,7 @@ footer {
 		width: 100%;
 		text-align: center;
 	}
+	color: $white;
 }
 
 
@@ -212,4 +220,74 @@ footer.footer-home {
 	border-radius: 10px;
 	margin-top: 20px;
 	margin-bottom: 50px;
+}
+
+.refer-header {
+	background: $referheader;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: $white;
+	span.big-text {
+	  font-weight: bold;
+	  font-size: 18px;
+	}
+}
+
+.refer-right h3 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 0px;
+	color: $white;
+}
+
+.refer-left {
+	color: #2e4d68;
+}
+
+.refer-content {
+	background: $grey1;
+}
+
+.progress {
+	height: 5px;
+	border-top: 1px solid #ddd;
+}
+
+.borderless td, .borderless th {
+    border-top: none !important;
+}
+.no-padding {
+	padding: 0px !important;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 50%;
+	background: $circle;
+	margin: auto;
+}
+
+.circle:hover {
+	cursor: pointer;
+}
+
+.td-circle {
+	width: 15%;
+	text-align: center;
+}
+
+.refer-text {
+	text-align: center;
+}
+.refer-award {
+	margin-top: 50px;
+}
+
+.circle.active {
+	background: $blue;
 }

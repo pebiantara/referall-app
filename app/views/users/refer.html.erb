@@ -1,93 +1,98 @@
-<div class="header" style="background: none repeat scroll 0% 0% #9E0477;">
-  <div class="content">
-    <p class="brandon">Globehopr &nbsp &nbsp</p>
-    <p class="byline brandon">Thank You for Signing Up. You’re one of the first in line!</p>
-  </div>
+<%= content_for :header, "&nbsp;" %>
+<%= content_for :footer, "&nbsp;" %>
+<div class="refer-header">
+  <a href="/" style="color: #fff;text-decoration: none;"><span class="big-text">Globehopr</span></a> Thank you for joining GLOBEHOPR. You're one of the first in line!
 </div>
-
-<div class="hero">
-  <div class="clearfix" style="width:100%; margin: 0 auto; z-index: 0; position: relative;">
-    <div class="mammoth">
-      <span class="need brandon mammoth-text">MIAMI IS CALLING! <br>
-      GLOBEHOPR is coming soon. To get things started with a bang, we’re awarding 2 trips to Miami this June.</span>
-    </div>
-    <div class="share-wrap">
-      <p class="why brandon">Travel Rewards evolved for the 21st Century. 
-      Be first in line and receive a chance to be awarded a trip to Miami.
-      </p>
-      <p class="title brandon">Don’t go alone. Invite friends & earn even more chances for Miami!</p>
-
-
-      <p class="subtitle brandon" style="font-weight: bold; font-size: 15px;">Sign-up and receive a unique referral link to share with friends and family via email, Facebook and Twitter. The more referrals, the more chances you’ll have to earn "free" gifts and more entries for the travel award to Miami in June!
-      </p>
-      <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
+<div class="refer-content">
+  <div class="container">
+    <div class="col-md-5 refer-left">
+      <br/>    <br/>
+      <strong>GLOBEHOPR</strong> is offering two members the chance to receive a trip for 2 to exciting Miami, Florida. We’re awarding 2 trips for two, for 3-days/2-nights in July.
+      <br/>
+      <br/>
+      Here’s how it works:
+      <br/>
+      <br/>
+      1.  Become a member of Globehopr
+      <br/>
+      2.  Refer at least 5 people who become members
+      <br/>
+      3.  Make your first purchase with one of our amazing business partners
+      <br/>
+      <br/>
+      That’s it. Starting at 15 referrals, the more referrals you make, the more chances you receive. 
+      <br/>
+      <br/>
+      Get ready to become a member of one of the most rewarding private membership organizations on the planet!    
+      <br/>
+      <br/>
       <% twitter_message = "#GLOBEHOPR." %>
-      <div class="social-links" >
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=GLOBEHOPR" class="fb" target="_blank"></a>
-        <div class="sep"></div>
-        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank" ></a>
+      <%- url = root_url + "?ref=" +  @user.referral_code %>
+      <a href="#" class="copy-link btn btn-default" data-clipboard-text="<%= url %>">
+        Copy Link
+      </a>
+      <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=GLOBEHOPR" class="fb" target="_blank">
+        <%= image_tag "icon/fb-ico.png", width: 30 %>
+      </a>
+      <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank" >
+        <%= image_tag "icon/twitt-ico.png", width: 30 %>
+      </a>
+    </div>
+    <div class="col-md-7 refer-right">
+      <%= image_tag "dance-miami.png", class: 'img-responsive' %>
+      <h3>DANCE THE NIGHT AWAY IN MIAMI</h3>
+    </div>
+    <div class="col-md-10 refer-award col-md-offset-1">
+      <%
+      referrals_count = @user.referrals.count
+
+      stops = User::REFERRAL_STEPS
+
+      found = nil
+
+      higher = User::REFERRAL_STEPS.map{|x| x['count']}.reverse.first;
+
+      percent = referrals_count == 0 ? 0 : referrals_count.to_f/higher * 100
+
+      stops.reverse_each { |stop|
+        if stop["count"] <= referrals_count and !found
+          stop["selected"] = true
+          found = stop
+        else
+          stop["selected"] = false
+        end
+      }
+      %>
+      <div class="table-responsive">
+        <table class="table borderless">
+          <tr>
+            <td class="text-center" style="padding: 30px">Friends Becoming Members</td>
+            <%- stops.each_with_index do |stop, index| %>
+            <td class="td-circle">
+              <div class="circle <%= 'active' if stop["selected"] %>" id="content-<%= index %>"><%= stop["count"] %></div>
+              <div class="tooltip" id="content-for-<%= index %>"><img src="<%= stop["image"] %>" height="254" width="300"></div>
+            </td>
+            <% end %>
+          </tr>
+          <tr>
+            <td colspan="6" class="">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:<%= percent %>%">
+                  <span class="sr-only"><%= referrals_count %> <%= referrals_count > 1 ? 'has' : 'have' %> joined</span>
+                </div>
+              </div>            
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">GLOBEHOPR AWARD</td>
+            <%- stops.each do |stop| %>
+            <td class="refer-text">
+              <div class=""><%= stop["html"].html_safe %></div>
+            </td>
+            <% end %>
+          </tr>
+        </table>
       </div>
     </div>
-  </div>
-</div>
-
-<%
-  referrals_count = @user.referrals.count
-
-  stops = User::REFERRAL_STEPS
-
-  found = nil
-
-  stops.reverse_each { |stop|
-    if stop["count"] <= referrals_count and !found
-      stop["selected"] = true
-      found = stop
-    else
-      stop["selected"] = false
-    end
-  }
-%>
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-  <div class="page-content">
-    <p class="callout brandon">Here's How It Works:</p>
-    <ul class="products clearfix">
-      <li class="title brandon"><p class="friends" style="letter-spacing: 1px;">Friends Joined</p><p class="rewards" style="letter-spacing: 1px;">GLOBEHOPR AWARD</p></li>
-      <% stops.each do |stop| %>
-        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'six' %>last<% end %>">
-          <div class="circle"><%= stop["count"] %></div>
-          <div class="sep"></div>
-          <p><%= stop["html"].html_safe %></p>
-
-          <div class="tooltip">
-            <img src="<%= stop["image"] %>" height="254" width="300">
-          </div>
-        </li>
-      <% end %>
-    </ul>
-
-    <div class="progress">
-      <div class="mover">
-        <div class="bar clearfix"></div>
-      </div>
-    </div>
-
-    <%
-      words = ''
-      if referrals_count == 1
-        words = 'friend has'
-      elsif
-        words = 'friends have'
-      end
-    %>
-
-    <% if referrals_count == 0 %>
-      <p class="place brandon" style="margin-top: 60px;"><span>No</span> friends have joined...Yet!</p>
-    <% else %>
-      <p class="place brandon" style="margin-top: 60px;"><span><%= referrals_count %></span> <%= words %> joined</p>
-    <% end %>
-    <p class="check brandon">Keep checking</p>
-
-    <!-- <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p> -->
-    <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
   </div>
 </div>

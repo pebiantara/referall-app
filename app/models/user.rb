@@ -24,38 +24,38 @@ class User < ActiveRecord::Base
   REFERRAL_STEPS = [
     {
       'count' => 5,
-      'html' => 'Travel Themed Bottle Opener',
+      'html' => '1,500 Travel Points + $5 Starbucks Card',
       'class' => 'two',
       'image' =>  ActionController::Base.helpers.asset_path(
-        'assets/refer/truman@2x.gif')
+        'assets/new-refer/starbucks.png')
     },
     {
       'count' => 10,
-      'html' => 'Universal Travel Charger',
+      'html' => '2,500 Travel Points + $10 iTunes Card',
       'class' => 'three',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/prize-5.gif')
+        'assets/new-refer/itunes.png')
     },
     {
       'count' => 15,
-      'html' => 'Luggage Tag + <br>15 Entries for Miami Travel Award',
+      'html' => '3,500 Travel Points + 15 Entries into Jamaica Vacation + $25 Visa Gift Card',
       'class' => 'four',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/Luggage Tag - 15 Referrals.jpg')
+        'assets/new-refer/visa.jpg')
     },
     {
       'count' => 20,
-      'html' => 'Digital Luggage Scale + <br>20 Entries into Miami Travel Award',
+      'html' => "50% off membership for 1-year + 20 entries into Jamaica vacation + $50 Visa Gift Card",
       'class' => 'five',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/Digital Luggage Scale - 20 Referrlas.jpg')
+        'assets/new-refer/amazon.jpg')
     },
     {
       'count' => 35,
-      'html' => 'Amenity Kit + <br>1st Class Airline Ticket for Two',
+      'html' => '1-year free membership + 50 entries into Jamaica vacation + 2 R/T Airline tickets to Washington, DC',
       'class' => 'six',
       'image' => ActionController::Base.helpers.asset_path(
-        'assets/refer/Amenity Kit - 35 Referrals.jpg')
+        'assets/new-refer/airline-ticket.jpg')
     }
   ]
 

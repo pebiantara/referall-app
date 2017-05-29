@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :skip_first_page, only: :new
   before_filter :handle_ip, only: :create
   before_filter :authenticate_user!, only: [:refer]
-
+  layout :set_layout, only: [:refer]
 
   def new
     @bodyId = 'home'
@@ -49,6 +49,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_layout
+    "referer"
+  end
 
   def skip_first_page
     return if Rails.application.config.ended

@@ -38,14 +38,30 @@ $(document).ready(function(){
 	});
 })
 
+var clipboard = new Clipboard('.copy-link');
+
+clipboard.on('success', function(e) {
+	alert("copied to clipboard: " + e.text);
+	e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+	console.error('Action:', e.action);
+	console.error('Trigger:', e.trigger);
+});
+
+
 function autoHeight() {
-	var h = $(document).height() - $('body').height();
-	if (h > 0) {
-		$('footer').css({
-			position: 'absolute',
-			bottom: '0px',
-			width: '100%'
-		});
-	}
+	setTimeout(function(){
+		var h = $(document).height() - $('body').height();
+		console.log(h);	
+		if (h > 0) {
+			$('footer').css({
+				position: 'absolute',
+				bottom: '0px',
+				width: '100%'
+			});
+		}		
+	}, 500)
 }
 $(window).on('load', autoHeight);
