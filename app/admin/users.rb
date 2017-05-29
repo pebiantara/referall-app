@@ -12,7 +12,7 @@ ActiveAdmin.register User do
     column :updated_at
   end
 
-  actions :index, :show
+  actions :index, :show, :destroy
 
   index do
     selectable_column
