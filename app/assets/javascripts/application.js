@@ -75,3 +75,4 @@ $('.circle').tooltip({
     animated: 'fade',
     html: true
 });
+$(".sr-only[data-toggle='tooltip']").tooltip('show');

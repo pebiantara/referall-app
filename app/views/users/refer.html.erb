@@ -77,7 +77,7 @@
             <td colspan="6" class="">
               <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:<%= percent %>%">
-                  <span class="sr-only"><%= referrals_count %> <%= referrals_count > 1 ? 'has' : 'have' %> joined</span>
+                  <span class="sr-only" data-toggle="tooltip" data-placement="top" title="<%= referrals_count %> <%= referrals_count > 1 ? 'has' : 'have' %> joined"><%= referrals_count %> <%= referrals_count > 1 ? 'has' : 'have' %> joined</span>
                 </div>
               </div>            
             </td>
