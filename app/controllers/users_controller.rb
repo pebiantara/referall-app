@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_filter :skip_first_page, only: :new
   before_filter :handle_ip, only: :create
+  before_filter :authenticate_user!, only: [:refer]
+
 
   def new
     @bodyId = 'home'
@@ -32,14 +34,10 @@ class UsersController < ApplicationController
     @bodyId = 'refer'
     @is_mobile = mobile_device?
 
-    @user = User.find_by_email(cookies[:h_email])
+    @user = current_user
 
     respond_to do |format|
-      if @user.nil?
-        format.html { redirect_to root_path, alert: 'Something went wrong!' }
-      else
-        format.html # refer.html.erb
-      end
+      format.html
     end
   end
 

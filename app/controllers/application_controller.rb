@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :ref_to_cookie
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def mobile_device?
     if session[:mobile_param]
@@ -12,6 +13,13 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+  def configure_permitted_parameters
+    registration_params = [:email, :password, :password_confirmation, :name, :address, :phone, :city, :zip_code, :dream_destination, :favorite_food, :favorite_restaurant, :avatar]
+
+    devise_parameter_sanitizer.for(:sign_up) do
+      |u| u.permit(registration_params)
+    end
+  end
 
   def ref_to_cookie
     campaign_ended = Rails.application.config.ended

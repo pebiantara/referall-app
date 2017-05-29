@@ -3,13 +3,23 @@ $white: #fff;
 $red: #c9302c;
 $blue2: #98d6f9;
 
-body {
-	background: $blue;
-	color: $white;
+body.home {
+  background: $blue;
+  color: $white;
   background: -webkit-linear-gradient($blue, $blue2); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($blue, $blue2); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($blue, $blue2); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue, $blue2);
+	.navbar-no-background {
+		background: none;
+		border: none;
+		color: #fff;
+	}
+
+	.logo {
+		display: block;
+		margin-top: 20px;
+	}
 }
 
 .form-member {
@@ -17,26 +27,15 @@ body {
 	margin-top: 35%;
 }
 
-.navbar-no-background {
-	background: none;
-	border: none;
+header.header-home .navbar-default .navbar-nav > li > a {
 	color: #fff;
 }
 
-.logo {
-	display: block;
-	margin-top: 20px;
-}
-
-.navbar-default .navbar-nav > li > a {
+header.header-home .navbar-default .navbar-nav > li > a:hover {
 	color: #fff;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
-	color: #fff;
-}
-
-header {
+header.header-home {
 	background: url('/assets/bg-big.png');
 	background-size: cover;
 	background-position: center;
@@ -133,7 +132,26 @@ section.info {
 }
 
 footer {
+	.footer {
+		min-height: 100px;
+		background: rgba($blue, 0.7);
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+footer.footer-home {
 	position: relative;
+
+	.footer {
+		min-height: 100px;
+		background: rgba($blue, 0.7);
+		width: 100%;
+		position: absolute;
+		bottom: 0px;	
+		text-align: center;
+	}
 }
 
 .footer-section {
@@ -142,15 +160,6 @@ footer {
 	background-size: cover;
 	background-position: center;
 	height: 487px;
-	text-align: center;
-}
-
-.footer {
-	min-height: 100px;
-	background: rgba($blue, 0.7);
-	width: 100%;
-	position: absolute;
-	bottom: 0px;	
 	text-align: center;
 }
 
@@ -174,4 +183,33 @@ footer {
 	img {
 	  margin-right: -10px;
 	}
+}
+
+.form-new-member {
+	margin-bottom: 10px;
+}
+
+.form-new-member h2 {
+	text-align: center;
+}
+
+.navbar-white {
+	background: #fff;
+	.logo {
+	  img {
+	    width: 100px;
+	  }
+	}
+}
+
+.error {
+	color: $red;
+}
+
+.login-box {
+	padding: 30px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 50px;
 }

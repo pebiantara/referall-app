@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav navbar-right">
+	<%- if user_signed_in? %>
+	<li><a href="/refer-a-friend">Referrals</a></li>
+	<li>
+		<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    </li>
+	<%- else %>
+	<li><a href="/user/sign_in">Member Login</a></li>
+	<li><a href="/user/sign_up">Join Today</a></li>
+	<% end %>
+</ul>

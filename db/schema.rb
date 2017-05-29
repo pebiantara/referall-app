@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130312045541) do
+ActiveRecord::Schema.define(version: 20170529051434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,8 +76,26 @@ ActiveRecord::Schema.define(version: 20130312045541) do
     t.string   "email"
     t.string   "referral_code"
     t.integer  "referrer_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.string   "encrypted_password"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.text     "dream_destination"
+    t.text     "favorite_food"
+    t.text     "favorite_restaurant"
   end
 
 end

@@ -13,3 +13,39 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(document).ready(function(){
+	$("#add-photo").click(function(){
+		$("#user_avatar").click();
+	})
+
+	function readURL(input) {
+
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				$('.upload-avatar').attr('src', e.target.result);
+			}
+
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+	$("#user_avatar").change(function(){
+		readURL(this);
+	});
+})
+
+function autoHeight() {
+	var h = $(document).height() - $('body').height();
+	if (h > 0) {
+		$('footer').css({
+			position: 'absolute',
+			bottom: '0px',
+			width: '100%'
+		});
+	}
+}
+$(window).on('load', autoHeight);

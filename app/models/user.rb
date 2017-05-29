@@ -3,13 +3,19 @@ require 'mailchimp'
 
 
 class User < ActiveRecord::Base
+  devise :database_authenticatable,
+         :recoverable, :rememberable, :trackable, :validatable, :registerable
+
   belongs_to :referrer, class_name: 'User', foreign_key: 'referrer_id'
   has_many :referrals, class_name: 'User', foreign_key: 'referrer_id'
 
-  validates :email, presence: true, uniqueness: true, format: {
-    with: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
-    message: 'Invalid email format.'
-  }
+  # validates :email, presence: true, uniqueness: true, format: {
+  #   with: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
+  #   message: 'Invalid email format.'
+  # }
+
+  validates_presence_of :name, :city, :address
+  
   validates :referral_code, uniqueness: true
 
   before_create :create_referral_code

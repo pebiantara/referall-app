@@ -1,4 +1,6 @@
-<header>
+<%= content_for :body_class, "home" %>
+<%= content_for :header do %>
+<header class="header-home">
 	<nav class="navbar navbar-default navbar-no-background">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -13,18 +15,16 @@
 				</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Member Login</a></li>
-					<li><a href="#">Join Today</a></li>
-				</ul>
+				<%= render "/layouts/menu" %>
 			</div>
 		</div>
 	</nav>
+	<%- unless user_signed_in? %>
 	<section class="form-member">
 		<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-3  member-input">
 			<h5>Become a Member today and quality for our</h5>
 			<h5>Weekly trip awards.</h5>
-			<%= form_for @user, :url => { :action => "create", :controller => "users" } do |f| %>
+			<%= form_for @user, :url => { :action => "new", :controller => "registrations" }, html: {method: :get} do |f| %>
 			<div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
 				<div class="input-group">
 					<%= f.email_field :email, :placeholder => "Submit email to be 1st in line", :class => "form-control email-member",
@@ -38,7 +38,9 @@
 			<% end %>
 		</div>
 	</section> 
+	<% end %>
 </header>
+<% end %>
 <div class="container">
 	<section class="info">
 		<div class="col-md-offset-1 col-md-10 info-box">
@@ -102,6 +104,7 @@
 		</div>
 	</section>
 </div>
+<%= content_for :footer do %>
 <section class="footer-section">
 	<div class="col-md-4 col-lg-4 col-md-offset-7 col-lg-offset-7 text-info">
 		Are their destinations you've dreamed of exploring? As a GLOBEHOPR member, we can make that dream destinations a reality!
@@ -109,7 +112,7 @@
 		<%= link_to "JOIN TODAY", "#" %>
 	</div>
 </section>
-<footer>
+<footer class="footer-home">
 	<div class="footer">
 		<ul class="footer-menu">
 			<li>
@@ -135,16 +138,16 @@
 			<div class="pull-left footer-left ico-social">
 				FOLLOW US:
 				<%= link_to "#" do %>
-          <%= image_tag("icon/fb-ico.png", width: 30) %>
+				<%= image_tag("icon/fb-ico.png", width: 30) %>
 				<% end %>
 				<%= link_to "#" do %>
-          <%= image_tag("icon/twitt-ico.png", width: 28) %>
+				<%= image_tag("icon/twitt-ico.png", width: 28) %>
 				<% end %>
 				<%= link_to "#" do %>
-          <%= image_tag("icon/yt-ico.png", width: 30) %>
+				<%= image_tag("icon/yt-ico.png", width: 30) %>
 				<% end %>
 				<%= link_to "#" do %>
-          <%= image_tag("icon/insta-ico.png", width: 30) %>
+				<%= image_tag("icon/insta-ico.png", width: 30) %>
 				<% end %>
 			</div>
 			<div class="pull-right">
@@ -155,3 +158,4 @@
 		</div>
 	</div>
 </footer>
+<% end %>
