@@ -3,7 +3,7 @@ $white: #fff;
 $red: #c9302c;
 $blue2: #98d6f9;
 $referheader: #597ed8;
-$grey1: #f3f3f3;
+$grey1: #454d55;
 $circle: #b7cce2;
 
 body.home {
@@ -25,13 +25,22 @@ body.home {
 	}
 }
 
+.header-text {
+	margin-top: 75px;
+}
+.header-text-small {
+	width: 80%;
+	text-align: center;
+	margin: auto;
+}
+
 .navbar {
 	margin-bottom: 0px;
 }
 
 .form-member {
 	text-align: center;
-	margin-top: 35%;
+	margin-top: 300px;
 }
 
 header.header-home .navbar-default .navbar-nav > li > a {
@@ -63,31 +72,36 @@ header.header-home {
 }
 .content-benefit {
 	img {
-	  height: 230px;
+	  height: 350px;
+	  width: 100%;
 	}
 }
 
+.benefits-box {
+	margin-top: 80px;
+}
+
 section.info { 
-  margin-top: 30px;
+  margin-top: 50px;
 
 	.info-content {
 	  text-align: center;
 		img {
 		  margin: auto;
 		  &.partner {
-		    width: 100px;
+		    width: 150px;
 		    margin: 15px 0px;
 		  }
 		  &.benefit {
-		    width: 75px;
+		    width: 100px;
 		    margin-bottom: 5px;
 		  }
 		  &.community {
-		    width: 100px;
+		    width: 135px;
 		  }
 		}
 		p {
-		  font-size: 11px;
+		  font-size: 14px;
 		}
 	}
 }
@@ -100,10 +114,12 @@ section.info {
     margin: auto;
   }
 	h4 {
-    position: relative;
+    position: absolute;
     background: rgba(62, 152, 204, 0.8);
-    padding: 5px;
-    top: 39px;
+    padding: 15px;
+    width: 100%;
+    margin: 0px;
+    top: 0px;
     left: 0px;
     text-align: center;
 	}
@@ -131,10 +147,17 @@ section.info {
   }
 }
 
-.unparraled-box {
-	margin-top: 50px;
+.unparraled-box {    
+	margin-top: 100px;
+	h3 {
+	  font-size: 30px;
+	}
 	p {
 	  margin: 20px 0px;
+	  font-size: 18px;
+	}
+	img {
+	  height: 400px;
 	}
 }
 
@@ -163,7 +186,7 @@ footer.footer-home {
 }
 
 .footer-section {
-	margin-top: 50px;
+	margin-top: 100px;
 	background: url('/assets/bg-second.png');
 	background-size: cover;
 	background-position: center;
@@ -240,6 +263,7 @@ footer.footer-home {
 	text-align: center;
 	top: 0px;
 	color: $white;
+	font-size: 30px;
 }
 
 .refer-left {
@@ -247,7 +271,11 @@ footer.footer-home {
 }
 
 .refer-content {
-	background: $grey1;
+    background: $blue;
+	background: -webkit-linear-gradient($blue, $white); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient($blue, $white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($blue, $white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient($blue, $white);
 }
 
 .progress {
@@ -279,6 +307,7 @@ footer.footer-home {
 .td-circle {
 	width: 15%;
 	text-align: center;
+	max-width: 100px;
 }
 
 .refer-text {

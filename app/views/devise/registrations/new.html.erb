@@ -27,11 +27,6 @@
         <small class="error"><%= resource.errors[:name].join(", ") %></small>
       </div>
       <div class="form-group">
-        <%= f.label :address, "Address*" %>
-        <%= f.text_field :address, autocomplete: "off", class: 'form-control' %>
-        <small class="error"><%= resource.errors[:address].join(", ") %></small>
-      </div>
-      <div class="form-group">
         <%= f.label :city, "City*" %>
         <%= f.text_field :city, autocomplete: "off", class: 'form-control', placeholder: '' %>
         <small class="error"><%= resource.errors[:city].join(", ") %></small>
@@ -47,6 +42,11 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
+        <%= image_tag("default-user.png", width: 100, class: 'upload-avatar') %>
+        <%= f.file_field :avatar, style: 'display:none;' %>
+        <div class="btn btn-default" id="add-photo">Add Photo</div>
+      </div>
+      <div class="form-group">
         <%= f.label :dream_destination %>
         <%= f.text_field :dream_destination, autocomplete: "off", class: 'form-control', placeholder: '' %>
       </div>
@@ -55,13 +55,9 @@
         <%= f.text_field :favorite_food, autocomplete: "off", class: 'form-control', placeholder: '' %>
       </div>
       <div class="form-group">
-        <%= f.label :favorite_restaurant, "Telephone" %>
+        <%= f.label :favorite_restaurant, "Favourite Restaurant" %>
         <%= f.text_field :favorite_restaurant, autocomplete: "off", class: 'form-control', placeholder: '' %>
-      </div>
-      <div class="form-group">
-        <%= image_tag("default-user.png", width: 100, class: 'upload-avatar') %>
-        <%= f.file_field :avatar, style: 'display:none;' %>
-        <div class="btn btn-default" id="add-photo">Add Photo</div>
+        <small>Occupation, Income, How many trips do you make annually, DO you primarily travel for Business or Pleasure and Favorite Hotel Brand.</small>
       </div>
     </div>
     <div class="actions col-md-12">

@@ -58,7 +58,6 @@ clipboard.on('error', function(e) {
 function autoHeight() {
 	setTimeout(function(){
 		var h = $(document).height() - $('body').height();
-		console.log(h);	
 		if (h > 0) {
 			$('footer').css({
 				position: 'absolute',

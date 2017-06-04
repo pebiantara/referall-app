@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   #   message: 'Invalid email format.'
   # }
 
-  validates_presence_of :name, :city, :address
+  validates_presence_of :name, :city
   
   validates :referral_code, uniqueness: true
 

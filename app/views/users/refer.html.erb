@@ -3,7 +3,7 @@
 </div>
 <div class="refer-content">
   <div class="container">
-    <div class="col-md-5 refer-left">
+    <div class="col-md-4 refer-left">
       <br/>    <br/>
       <strong>GLOBEHOPR</strong> is offering two members the chance to receive a trip for 2 to exciting Miami, Florida. We’re awarding 2 trips for two, for 3-days/2-nights in July.
       <br/>
@@ -36,7 +36,7 @@
         <%= image_tag "icon/twitt-ico.png", width: 30 %>
       </a>
     </div>
-    <div class="col-md-7 refer-right">
+    <div class="col-md-8 refer-right">
       <%= image_tag "dance-miami.png", class: 'img-responsive' %>
       <h3>DANCE THE NIGHT AWAY IN MIAMI</h3>
     </div>
@@ -67,7 +67,7 @@
             <td class="text-center" style="padding: 30px">Friends Becoming Members</td>
             <%- stops.each_with_index do |stop, index| %>
             <td class="td-circle">
-            <div class="circle <%= 'active' if stop["selected"] %>" data-toggle="tooltip" data-title="<img src='<%= stop["image"] %>' width='300' height='254'/>" id="content-<%= index %>">
+            <div class="circle <%= 'active' if stop["selected"] %>" data-toggle="tooltip" data-title="<img src='<%= stop["image"] %>' width='210' height='150'/>" id="content-<%= index %>">
                 <%= stop["count"] %>
               </div>
             </td>

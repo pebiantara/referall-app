@@ -16,6 +16,7 @@
 </head>
 <body class="<%= yield :body_class %>">
   <%= yield %>
+  <%= render "/layouts/footer" %>
   <%= javascript_include_tag "application", media: "all" %>
 </body>
 </html>
