@@ -21,7 +21,6 @@ body.home {
 
 	.logo {
 		display: block;
-		margin-top: 20px;
 	}
 }
 
@@ -48,11 +47,9 @@ body.home {
 }
 
 header.header-home .navbar-default .navbar-nav > li > a {
-	color: #fff;
 }
 
 header.header-home .navbar-default .navbar-nav > li > a:hover {
-	color: #fff;
 }
 
 header.header-home {
@@ -61,6 +58,9 @@ header.header-home {
 	background-position: center;
 	height: 748px;
 	background-repeat: no-repeat;
+	.navbar-white {
+	  opacity: 0.8;
+	}
 }
 
 .member-input {
@@ -259,6 +259,7 @@ footer.footer-home {
 
 .navbar-white {
 	background: #fff;
+	border-radius: 0px;
 	.logo {
 	  img {
 	    width: 100px;
