@@ -36,10 +36,15 @@
         <%= image_tag "icon/twitt-ico.png", width: 30 %>
       </a>
     </div>
-    <div class="col-md-8 refer-right">
+    <div class="col-md-8 refer-right no-padding">
       <%= image_tag "dance-miami.png", class: 'img-responsive' %>
       <h3>DANCE THE NIGHT AWAY IN MIAMI</h3>
     </div>
+  </div>
+</div>
+<div class="">
+  <div class="container">
+
     <div class="col-md-10 refer-award col-md-offset-1">
       <%
       referrals_count = @user.referrals.count
@@ -67,7 +72,7 @@
             <td class="text-center" style="padding: 30px">Friends Becoming Members</td>
             <%- stops.each_with_index do |stop, index| %>
             <td class="td-circle">
-            <div class="circle <%= 'active' if stop["selected"] %>" data-toggle="tooltip" data-title="<img src='<%= stop["image"] %>' width='210' height='150'/>" id="content-<%= index %>">
+              <div class="circle <%= 'active' if stop["selected"] %>" data-toggle="tooltip" data-title="<img src='<%= stop["image"] %>' width='210' height='150'/>" id="content-<%= index %>">
                 <%= stop["count"] %>
               </div>
             </td>
