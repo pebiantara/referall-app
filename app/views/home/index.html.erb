@@ -19,11 +19,11 @@
 			</div>
 		</div>
 	</nav>
-	<%- unless user_signed_in? %>
-	<div class="header-text text-center col-md-6 col-lg-6 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-3">
+	<div class="header-text text-center col-md-6 col-lg-6 col-sm-12 col-xs-12 ">
 		<h2>Welcome to GLOBEHOPR</h2>
 		<div class="header-text-small">There are Rewards Programs and then there’s GLOBEHOPR! More rewards, more savings and more of the World to explore.</div>
 	</div>
+	<%- unless user_signed_in? %>
 	<section class="form-member">
 		<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-3  member-input">
 			<h5>Become a Member today and quality for our</h5>
@@ -76,22 +76,31 @@
 <div class="benefits-box col-md-12 col-lg-12 no-padding">
 		<div class="col-md-3 content-benefit no-padding">
 			<h4>TRAVEL REWARDS</h4>
-			<%= image_tag("plane.png", class: 'img-responsive') %>
+			<!-- <#%= image_tag("plane.png", class: 'img-responsive') %> -->
+			<div class="img-content plane">
+				
+			</div>
 			<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
 		</div>
 		<div class="col-md-3 content-benefit no-padding">			  
 			<h4>PRIVATE EVENTS</h4>
-			<%= image_tag("massage.png", class: 'img-responsive') %>			
+			<div class="img-content massage">
+				
+			</div>
 			<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
 		</div>
 		<div class="col-md-3 content-benefit no-padding">
 			<h4>FITNESS/LIFESTYLE</h4>
-			<%= image_tag("drink.png", class: 'img-responsive') %>
+			<div class="img-content drink">
+				
+			</div>
 			<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
 		</div>
 		<div class="col-md-3 content-benefit no-padding">
 			<h4>MEMBER DISCOUNTS</h4>
-			<%= image_tag("member.png", class: 'img-responsive') %>
+			<div class="img-content member">
+				
+			</div>
 			<%= link_to "LEARN MORE", "#", class: 'btn btn-primary' %>
 		</div>
 	</div>
@@ -100,7 +109,7 @@
 	<section class="unparraled">
 		<div class="col-md-12 col-lg-12 unparraled-box">
 			<div class="col-md-5 col-lg-5">
-				<h3>UNPARALLED BENEFIT, INCLUDING PRIVATE JET TRAVEL!</h3>
+				<h3>UNPARALLED BENEFITS, INCLUDING PRIVATE JET TRAVEL!</h3>
 				<p>GLOBEHOPR is the only rewards company to offer members private jet travel as an ongoing benefit!</p>
 				<p>We've parternerd with a leading private jet company to offer Platinum level members private jet travel as a part of their complimentary weekly Travel Award</p>
 			</div>

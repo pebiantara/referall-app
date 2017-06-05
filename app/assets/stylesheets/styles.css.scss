@@ -27,11 +27,15 @@ body.home {
 
 .header-text {
 	margin-top: 75px;
+	h2 {
+	  font-size: 40px;
+	}
 }
 .header-text-small {
 	width: 80%;
 	text-align: center;
 	margin: auto;
+	font-size: 15px;
 }
 
 .navbar {
@@ -77,6 +81,35 @@ header.header-home {
 	}
 }
 
+.img-content {
+	width: 100%;
+	height: 350px;
+    &.plane {
+      background: url('/assets/plane.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.massage {
+      background: url('/assets/massage.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.drink {
+      background: url('/assets/drink.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.member {
+      background: url('/assets/member.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+}
+
 .benefits-box {
 	margin-top: 80px;
 }
@@ -89,19 +122,19 @@ section.info {
 		img {
 		  margin: auto;
 		  &.partner {
-		    width: 150px;
+		    width: 100px;
 		    margin: 15px 0px;
 		  }
 		  &.benefit {
-		    width: 100px;
+		    width: 75px;
 		    margin-bottom: 5px;
 		  }
 		  &.community {
-		    width: 135px;
+		    width: 100px;
 		  }
 		}
 		p {
-		  font-size: 14px;
+		  font-size: 11px;
 		}
 	}
 }
